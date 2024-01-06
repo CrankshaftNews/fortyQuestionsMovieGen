@@ -33,9 +33,9 @@ def main():
 			print("TRUE")
 			os.system("say -o question.aiff -v \"Matilda (Premium)\" -r 150 \""+ str(token) +"\"")
 			print("say done!")
-			with open('question.txt', 'w') as f:
-				f.write(str(token))
-			os.system("marp --image png question.txt -o question.png")
+			with open('question.md', 'w') as f:
+				f.write("<style> \n section { \n background-color: #00FF00;\n color: #FFFFFF;\n font-size: 60px;\n } \n </style>\n # " + str(token))
+			os.system("marp --image png question.md -o question.png")
 			print("marp done!")
 			os.system("ffprobe -i question.aiff -show_entries format=duration -v quiet -of csv='p=0' >> seconds.txt")
 			with open("seconds.txt", 'r') as seconds:
@@ -51,10 +51,10 @@ def main():
 			print("FALSE")
 			os.system("say -o answer.aiff -v \"Zoe (Premium)\" -r 150 \""+ str(token) +"\"")
 			print("say done!")
-			with open('answer.txt', 'w') as f:
-				f.write(str(token))
+			with open('answer.md', 'w') as f:
+				f.write("<style> \n section { \n background-color: #FF0000;\n color: #FFFFFF;\n font-size: 60px;\n } \n </style>\n # " + str(token))
 			open("seconds.txt", 'w').close()				
-			os.system("marp --image png answer.txt -o answer.png")
+			os.system("marp --image png answer.md -o answer.png")
 			print("marp done!")		
 			os.system("ffprobe -i answer.aiff -show_entries format=duration -v quiet -of csv='p=0' >> seconds.txt")
 			with open("seconds.txt", 'r') as seconds:
