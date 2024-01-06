@@ -1,6 +1,6 @@
 # Author: Shyamal Suhana Chandra
 # Date: December 2, 2023 @ 3:32 PM
-# Function: To create spoken study movies with TTS from different study prompts for Domino Data Systems Interviews.
+# Function: To create 40 questions and answers with TTS from different topic prompts for Crankshaft News.
 
 #!/usr/local/bin/python3.11
 
