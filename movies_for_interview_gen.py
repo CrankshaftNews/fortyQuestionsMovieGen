@@ -1,6 +1,7 @@
 # Author: Shyamal Suhana Chandra
 # Date: December 2, 2023 @ 3:32 PM
 # Function: To create 40 questions and answers with TTS from different topic prompts for Crankshaft News.
+# CONFIDENTIAL AND PROPRIETARY CODE OF SHYAMAL CHANDRA
 
 #!/usr/local/bin/python3.11
 
